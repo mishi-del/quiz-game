@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Quiz Challenge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="header">
+            <h1>Abiha Emaan Hashmi</h1>
+            <p class="lead">ID: 1899</p>
+            <h3>Test Your Knowledge with Quizzes</h3>
+        </div>
+        <div class="content-area">
+            <div id="languageSelection">
+                <h2 class="text-center mb-4">Which language quiz would you like to take?</h2>
+                <p class="text-center text-muted mb-4">Select one of the programming languages below to start the quiz</p>
+                
+                <div class="language-grid">
+                    <div class="language-card" data-lang="html">
+                        <div class="language-icon html-color">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>HTML</h3>
+                        <p class="text-muted">10 questions</p>
+                    </div>
+                    
+                    <div class="language-card" data-lang="css">
+                        <div class="language-icon css-color">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3>CSS</h3>
+                        <p class="text-muted">10 questions</p>
+                    </div>
+                    
+                    <div class="language-card" data-lang="js">
+                        <div class="language-icon js-color">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p class="text-muted">10 questions</p>
+                    </div>
+                    
+                    <div class="language-card" data-lang="python">
+                        <div class="language-icon python-color">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p class="text-muted">10 questions</p>
+                    </div>
+                </div>
+            </div>
+            <div id="quizScreen" style="display: none;">
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                
+                <div class="question-counter">Question: <span id="currentQuestion">1</span>/10</div>
+                <div id="questionText" class="question-text">Who is making the Web standards?</div>
+                
+                <div id="optionsContainer" class="options-container">
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="prevButton" class="btn btn-secondary"><i class="fas fa-arrow-left me-2"></i>Previous</button>
+                    <button id="nextButton" class="btn btn-primary">Next<i class="fas fa-arrow-right ms-2"></i></button>
+                    <button id="finishButton" class="btn btn-success" style="display: none;">Finish Quiz</button>
+                </div>
+            </div>
+            <div id="scoreContainer" class="score-container">
+                <h2>Your Score</h2>
+                <div class="score-value"><span id="scoreValue">0</span>/10</div>
+                <h3>Congratulations</h3>
+                <p>Great job, <span id="userName">Abihaa</span>! You Did It</p>
+                
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-light"><i class="fas fa-home me-2"></i>Back to Home</button>
+                    <button class="btn btn-light"><i class="fas fa-redo me-2"></i>Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="confirmation-modal">
+        <div class="confirmation-content">
+            <button id="closeModal" class="btn-close"><i class="fas fa-times"></i></button>
+            <h3>Start <span id="selectedLangName">HTML</span> Quiz?</h3>
+            <p>Are you sure you want to start the <span id="selectedLangName2">HTML</span> quiz? This quiz contains 10 questions.</p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <button id="confirmStart" class="btn btn-primary">Yes, Start Quiz</button>
+                <button id="cancelStart" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
+</html>
